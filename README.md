@@ -1,1 +1,3 @@
 # PMA-WriteFile
+
+query writefile
